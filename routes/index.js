@@ -41,8 +41,8 @@ router.get('/profile', async function (req, res, next) {
   //   .catch(err => console.error('error:' + err)); 
 });
 
-router.get('/', (req, res) => {
-  urll = 'https://graph.instagram.com/v15.0/me?fields=id,media_url&access_token=IGQVJVdFdNczNGZAWFyckgyS0h4VkdjemZARTzdhM0o0WFhPMnVJSXUyTkVPeHcxRE5qaG9qaDN5a2dhdTNUNWxyeU9YSlVZAMlptdjdzQXZAtX0NMdGVnekpLZAlhyR0RrbnY1MGJzLXowMWo4LVpfZAVBTdgZDZD'
+router.get('/test/:username', (req, res) => {
+  urll = 'https://graph.instagram.com/v15.0/me/media?fields=id,media_url&access_token=IGQVJVdFdNczNGZAWFyckgyS0h4VkdjemZARTzdhM0o0WFhPMnVJSXUyTkVPeHcxRE5qaG9qaDN5a2dhdTNUNWxyeU9YSlVZAMlptdjdzQXZAtX0NMdGVnekpLZAlhyR0RrbnY1MGJzLXowMWo4LVpfZAVBTdgZDZD'
   fetch(urll)
     .then(response => response.json())
     .then(json => { console.log(json), res.send(json) })
