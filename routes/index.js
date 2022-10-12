@@ -41,7 +41,7 @@ router.get('/profile', async function (req, res, next) {
   //   .catch(err => console.error('error:' + err)); 
 });
 
-router.get('/facebook', (req, res) => {
+router.get('/', (req, res) => {
   res.render('index')
 });
 
