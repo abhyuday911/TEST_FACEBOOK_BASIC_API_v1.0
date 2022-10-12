@@ -16,7 +16,7 @@ router.get('/tag', async function (req, res, next) {
 
 // this dude is useless
 
-router.get('/profile', async function (req, res, next) {
+router.get('/', async function (req, res, next) {
   url = 'https://www.instagram.com/abhyuday911/?__a=1&__d=dis'
 
   // https.get(url,(res)=>{
